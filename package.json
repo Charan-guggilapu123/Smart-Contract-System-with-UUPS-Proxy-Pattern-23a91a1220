@@ -1,0 +1,31 @@
+{
+  "name": "token-vault-uups",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Upgradeable TokenVault using UUPS proxy pattern with V1-V3 lifecycle",
+  "scripts": {
+    "clean": "rimraf cache artifacts coverage",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:v1": "hardhat run scripts/deploy-v1.js",
+    "upgrade:v2": "hardhat run scripts/upgrade-to-v2.js",
+    "upgrade:v3": "hardhat run scripts/upgrade-to-v3.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "chai": "^4.3.10",
+    "hardhat": "^2.22.4",
+    "mocha": "^10.2.0",
+    "rimraf": "^5.0.5",
+    "solidity-coverage": "^0.8.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "@openzeppelin/hardhat-upgrades": "^2.5.1",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.10.0"
+  }
+}

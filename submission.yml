@@ -1,0 +1,7 @@
+version: 1
+setup:
+  - cmd: npm ci || npm install
+  - cmd: npx hardhat compile
+verify:
+  - cmd: npx hardhat test
+  - cmd: npx hardhat coverage
